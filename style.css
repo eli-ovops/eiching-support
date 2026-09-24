@@ -1,0 +1,11 @@
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { max-width: 760px; margin: 0 auto; padding: 48px 24px; background: #f9f6ee; color: #14241e; font: 17px/1.65 system-ui, -apple-system, sans-serif; }
+h1 { font: 2.3rem/1.15 Georgia, serif; }
+h2 { margin-top: 2rem; font: 1.5rem/1.25 Georgia, serif; }
+p, li { max-width: 68ch; }
+a { color: #14523b; }
+a:focus-visible { outline: 3px solid #14523b; outline-offset: 4px; }
+nav { display: flex; gap: 24px; flex-wrap: wrap; margin: 28px 0; }
+.eyebrow { font-size: .85rem; letter-spacing: .12em; text-transform: uppercase; }
+footer { border-top: 1px solid #c5c9c1; margin-top: 64px; padding-top: 16px; font-size: .85rem; }

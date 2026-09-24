@@ -1,0 +1,64 @@
+schema_version: "1.0"
+status: "prepared"
+site_id: "eiching-app-store-support"
+project: "E-iching iOS 1.0"
+confirmed_by: "user authorized App Store review preparation"
+confirmed_at: "2026-09-24"
+no_secret_values: true
+
+server:
+  reference: "GitHub Pages managed hosting"
+  owner: "GitHub"
+
+environments:
+  preview:
+    enabled: false
+    public_url: null
+    admin_path: null
+  production:
+    enabled: true
+    public_url: "https://eli-ovops.github.io/eiching-support/"
+    admin_path: null
+
+repository:
+  repo_url: "https://github.com/eli-ovops/eiching-support"
+  approved_branch: "codex/eiching-support-launch"
+  production_branch: "codex/eiching-support-launch"
+  commit_sha_required: true
+
+architecture: "static"
+
+deployment:
+  call_carrier: "GitHub CLI and GitHub Pages branch source"
+  allowed_modes: ["static-pages"]
+  guide_reference: "README.md"
+  production_approval_required: true
+  authorization_reference: "user request to prepare E-iching iOS 1.0 until only final App Store review click remains"
+  deploy_owner: "current E-iching execution task"
+  validate_required: true
+  status_required: true
+
+storage:
+  code_reference: "this directory"
+  releases_reference: "Git history of the approved branch"
+  database_reference: null
+  media_reference: null
+
+database:
+  type: "other"
+  business_data_in_file: false
+
+backup:
+  procedure_reference: "Git history of the approved branch"
+  database_and_media_separate: true
+  restore_rehearsal_required: false
+
+health_checks:
+  public_page: "GET /, /support.html, and /privacy.html over HTTPS; inspect visible text in browser"
+  application: null
+  admin: null
+  api: null
+
+rollback:
+  procedure_reference: "Restore the previous approved commit on the Pages source branch, or disable Pages if this first release is invalid"
+  explicit_authorization_required: true
