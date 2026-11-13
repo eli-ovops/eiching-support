@@ -1,4 +1,4 @@
-# E-iching App Store support pages
+# E-iching Support
 
 Static English support and privacy pages for E-iching iOS 1.0. The public repository contains only these pages and their delivery metadata. The iOS source, App Review contact phone, and private reading data are not part of this site.
 
